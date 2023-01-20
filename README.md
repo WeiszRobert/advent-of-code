@@ -2,6 +2,8 @@
 
 ## 2022
 
+[Tasks of 2022](https://adventofcode.com/2022)
+
 [Day 1](2022/01/)  
 [Day 2](2022/02/)  
 [Day 3](2022/03/)  
