@@ -5,6 +5,7 @@
 [Tasks of 2023](https://adventofcode.com/2023)
 
 [Day 1](2023/01/) 
+[Day 2](2023/02/) 
 
 ## 2022
 
