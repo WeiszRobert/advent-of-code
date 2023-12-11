@@ -13,8 +13,10 @@ let isOnlySpaceCol = []
 
 for (let i = 0; i < input[0].length; i++) {
     let isOnlySpace = true
-    for (let j = 0; j < input.length; j++) {
-        isOnlySpace = isOnlySpace && input[j].split('')[i] === '.'
+    let j = 0
+    while (isOnlySpace && j < input.length) {
+        isOnlySpace = input[j].split('')[i] === '.'
+        j++
     }
     if (isOnlySpace) {
         isOnlySpaceCol.push(i)
