@@ -7,7 +7,7 @@ const input = fs
 	.trim()
 	.split('\r\n')
 
-const modifier = 2
+const modifier = 1000000
 
 let isOnlySpaceCol = []
 
