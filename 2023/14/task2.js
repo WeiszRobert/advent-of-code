@@ -7,12 +7,8 @@ const input = fs
 	.trim()
 	.split('\r\n')
 
-function rotate90(matrix) {
-    return matrix[0].split('').map((val, index) => matrix.map(row => row[index])).reverse().map(row => row.join(''))
-}
-
 function rotateMinus90(matrix) {
-    return matrix[0].split('').map((val, index) => matrix.map(row => row[index])).map(row => row.reverse()).map(row => row.join(''))
+    return matrix[0].split('').map((_, index) => matrix.map(row => row[index])).map(row => row.reverse()).map(row => row.join(''))
 }
 
 function tilt(matrix) {
@@ -42,26 +38,12 @@ function tilt(matrix) {
 }
 
 function rotation(matrix) {
-    //first north
-    let newinput = tilt(matrix)
-
-    //then west
-    newinput = rotateMinus90(newinput)
-    newinput = tilt(newinput)
-    newinput = rotate90(newinput)
-    //then south
-    newinput = rotateMinus90(newinput)
-    newinput = rotateMinus90(newinput)
-    newinput = tilt(newinput)
-    newinput = rotate90(newinput)
-    newinput = rotate90(newinput)
-
-    //then east
-    newinput = rotate90(newinput)
-    newinput = tilt(newinput)
-    newinput = rotateMinus90(newinput)
-
-    return newinput
+    let newinput = matrix;
+    for (let i = 0; i < 4; i++) {
+        newinput = tilt(newinput);
+        newinput = rotateMinus90(newinput);
+    }
+    return newinput;
 }
 
 function hashCode(s) {
