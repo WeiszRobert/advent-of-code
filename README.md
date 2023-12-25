@@ -4,6 +4,8 @@
 
 [Tasks of 2023](https://adventofcode.com/2023)
 
+*I got 34/50 stars this year. It was nice, I'm happy with it. My favorite was [Day 7](2023/07/).*
+
 [Day 1](2023/01/)  
 [Day 2](2023/02/)  
 [Day 3](2023/03/)  
